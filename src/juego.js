@@ -16,7 +16,7 @@ btnIniciar.addEventListener('click', async () => {
     vidas = 7;
     for (let i = 0; i < 7; i++) {
         const img = document.createElement('img');
-        img.src = '../public/img/gato-exito.svg';
+        img.src = '/img/gato-exito.svg';
         img.classList.add('vida');
         bloqueVidas.appendChild(img);
     }
@@ -40,7 +40,7 @@ async function siguienteNivel() {
 
     const res = await fetch(`https://api.thecatapi.com/v1/images/search?limit=1&breed_ids=${razaCorrecta.id}&api_key=${apiKey}`);
     const data = await res.json();
-    const imgUrl = data[0]?.url || '../public/img/gato-error.svg';
+    const imgUrl = data[0]?.url || '/img/gato-error.svg';
 
     contenedorImagen.innerHTML = `<img src="${imgUrl}" alt="Gato" class="gato-imagen">`;
 
@@ -65,7 +65,7 @@ function verificarRespuesta(boton, seleccion) {
         const vidasImgs = bloqueVidas.querySelectorAll('img');
         const idx = vidasImgs.length - vidas - 1;
         if (vidasImgs[idx]) {
-            vidasImgs[idx].src = '../public/img/gato-error.svg';
+            vidasImgs[idx].src = '/img/gato-error.svg';
             vidasImgs[idx].style.opacity = '0.5';
         }
     }
