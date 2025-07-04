@@ -130,12 +130,12 @@
 }
 
 .bloque-muestras .card:nth-child(1)> .imagen{
-    background-image: url(./img/1.png);
+    background-image: url(../public/img/1.png);
 }
 .bloque-muestras .card:nth-child(2)> .imagen{
-    background-image: url(./img/2.png);
+    background-image: url(../public/img/2.png);
 }
 .bloque-muestras .card:nth-child(3)> .imagen{
-    background-image: url(./img/3.png);
+    background-image: url(../public/img/3.png);
 }
 

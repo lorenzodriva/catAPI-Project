@@ -14,7 +14,7 @@ if (favoritos.length === 0) {
         <div class="pantalla-error">
             <h3>¡No hay favoritos guardados!</h3>
             <p>Vuelve a <a href="./gatos.html"><u><b>Gatos</b></u></a> y guarda tus favoritos!</p>
-            <img src="./src/img/gato-error.svg" alt="Imagen de gato error">
+            <img src="../public/img/gato-error.svg" alt="Imagen de gato error">
         </div>
     `;
 
@@ -39,8 +39,8 @@ if (favoritos.length === 0) {
             <p class="detalles"><b>Origen</b>: ${breed.origin}<br><b>Temperamento</b>: ${breed.temperament.split(',').slice(0,2).join(', ')}</p>
         </div>
         <div class="card-contenedor-boton">
-            <button class="detalles-btn"><img src="./src/img/info.svg" title="Ver detalles"></button>
-            <button class="favoritos-btn"><img src="./src/img/favorito-s.svg" title="Quitar de Favoritos" alt="♥"></button>
+            <button class="detalles-btn"><img src="../public/img/info.svg" title="Ver detalles"></button>
+            <button class="favoritos-btn"><img src="../public/img/favorito-s.svg" title="Quitar de Favoritos" alt="♥"></button>
         </div>
         `;
 
@@ -69,7 +69,7 @@ if (favoritos.length === 0) {
                 <div class="pantalla-error">
                     <h3>¡No hay favoritos guardados!</h3>
                     <p>Vuelve a <a href="./gatos.html"><u><b>Gatos</b></u></a> y guarda tus favoritos!</p>
-                    <img src="./src/img/gato-error.svg" alt="Imagen de gato error">
+                    <img src="../public/img/gato-error.svg" alt="Imagen de gato error">
                 </div>
                 `;
             }

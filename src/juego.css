@@ -9,11 +9,15 @@ main{
   height: 100px;
   background-color: var(--s-color);
 }
+
+.encabezado h1{
+  text-shadow: 0 0 7px var(--t-color);
+}
+
 /* --- Presentación inicial --- */
 .presentacion-juego {
   background-color: var(--s-color);
-  padding: 30px;
-  box-shadow: 0px 1px 9px var(--t-color);
+  padding: 0 30px 30px 30px;
   margin-bottom: 30px;
   color: var(--t-color);
 }
@@ -23,6 +27,18 @@ main{
   margin-bottom: 20px;
   line-height: 1.5;
   text-align: center;
+}
+.presentacion-juego b:hover{
+  color: inherit;
+  transition: 0.5s;
+}
+
+.presentacion-juego b:hover{
+  color: var(--f-color);
+}
+
+.presentacion-juego h3{
+  margin: 0;
 }
 
 /* --- Botón Iniciar --- */
@@ -54,8 +70,23 @@ main{
   align-items: center;
   gap: 40px;
   margin-top: 20px;
-  flex-wrap: wrap;
-  height: 300px;
+  flex-wrap: wrap; 
+  background-color: var(--t-color);
+}
+
+@media (max-width: 499px){
+    .contenedor-juego{
+        height: 400px;
+    }
+    main{
+      height: 900px;
+    }
+}
+
+@media (min-width: 500px){
+    .contenedor-juego{
+        height: 300px;
+    }
 }
 
 /* --- Imagen del gato --- */
@@ -121,20 +152,33 @@ main{
 }
 
 /* --- Fin del juego --- */
-#contenedor-juego h2 {
-  font-size: 32px;
-  color: var(--t-color);
-  text-shadow: 0 0 5px var(--s-color);
-  margin-bottom: 10px;
+
+.fin-juego{
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
 }
 
-#contenedor-juego p {
-  font-size: 18px;
-  margin-bottom: 20px;
+.fin-juego h2{
+  width: 100%;
+  font-size: 50px;
+  color: var(--f-color);
+  box-shadow: none;
+  margin: 15px;
   text-align: center;
 }
 
-#contenedor-juego button {
-  margin: 0 auto;
-  display: block;
+.fin-juego p{
+  width: 100%;
+  text-align: center;
+  color: var(--f-color);
+  margin: 0;
+  margin-bottom: 50px;
+  font-size: 18px;
 }
+
+.fin-juego button{
+  height: 70px;
+  border-radius: 50px;
+}
+

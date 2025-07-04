@@ -52,7 +52,7 @@ async function cargarRazas() {
       <div class="pantalla-error">
           <h3>¡Ha ocurrido un error!</h3>
           <p>No se han encontrado las razas. <br>Intenta recargar la página o sino espera unos minutos y vuelve a intentar</p>
-          <img src="./src/img/gato-error.svg" alt="Imagen de gato error">
+          <img src="../public/img/gato-error.svg" alt="Imagen de gato error">
       </div>
     `
     console.error("Error al cargar razas:", err);
@@ -72,7 +72,7 @@ async function cargarSiguienteLote() {
       <div class="pantalla-error">
           <h3>¡Perdón!</h3> 
           <p>No se han encontrado gatos que coincidan con la búsqueda. <br>Intenta buscar la raza con otro nombre</p> 
-          <img src="./src/img/gato-error.svg" alt="Imagen de gato error">
+          <img src="../public/img/gato-error.svg" alt="Imagen de gato error">
       </div>
     `;
     cargarMas.style.display = 'none';
@@ -105,8 +105,8 @@ async function cargarSiguienteLote() {
           <p class="detalles"><b>Origen</b>: ${breed.origin}<br><b>Temperamento</b>: ${breed.temperament.split(',').slice(0,2).join(', ')}</p>
         </div>
         <div class="card-contenedor-boton">
-          <button class="detalles-btn"><img src="./src/img/info.svg" title="Ver detalles"></button>
-          <button class="favoritos-btn" id="favoritos-btn"><img src="./src/img/favorito-n.svg" title="Agregar a Favoritos" alt="♥"></button>
+          <button class="detalles-btn"><img src="../public/img/info.svg" title="Ver detalles"></button>
+          <button class="favoritos-btn" id="favoritos-btn"><img src="../public/img/favorito-n.svg" title="Agregar a Favoritos" alt="♥"></button>
         </div>
       `;
 
@@ -158,8 +158,8 @@ function actualizarIconoFavorito(boton, breedId) {
   const esFavorito = favoritos.some(f => f.id === breedId);
 
   boton.querySelector('img').src = esFavorito
-    ? './src/img/favorito-s.svg'
-    : './src/img/favorito-n.svg';
+    ? '../public/img/favorito-s.svg'
+    : '../public/img/favorito-n.svg';
 }
 
 /* Filtrar */
