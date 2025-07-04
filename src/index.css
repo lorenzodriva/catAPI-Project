@@ -1,0 +1,141 @@
+@import url("./globals.css");
+
+
+/* CONTENEDOR DE PRESENTACION ----------------------------------------------------------------------------*/
+
+.bloque-presentacion{
+    width: 100%;
+    display: flex;
+    color: var(--f-color);
+    text-shadow: 0 0 5px black;
+    background-color: #000001;
+}
+
+.bloque-presentacion>.bloque-espacio{
+    width: 30%;
+}
+
+.bloque-presentacion>.texto{
+    width: 70%;
+    margin: 6%;
+}
+
+
+@media (max-width: 600px) {
+    .bloque-presentacion{
+        background-image:
+            linear-gradient(to top,rgba(0, 0, 0, 1) 65%, rgba(0, 0, 0, 0.8) 75%, rgba(0, 0, 0, 0) 100%),
+            url(https://img.pikbest.com/wp/202406/cat-eyes-wallpaper-of-a-group-cats-with-different_9608761.jpg!w700wp);
+        background-position: top;
+        background-size: contain;
+        background-repeat: no-repeat;
+    }
+    .bloque-presentacion>.bloque-espacio{
+        width: 0%;
+    }
+    .bloque-presentacion>.texto{
+        width: 100%;
+        margin: 6%;
+    }
+}
+@media ( min-width: 601px) and (max-width: 924px) {
+    .bloque-presentacion{
+        background-image:
+            linear-gradient(to top, rgba(0, 0, 0, 1) 50%,  rgba(0, 0, 0, 0.6) 75%, rgba(0, 0, 0, 0) 100%),
+            url(https://img.pikbest.com/wp/202406/cat-eyes-wallpaper-of-a-group-cats-with-different_9608761.jpg!w700wp);
+        background-position: top;
+        background-size: contain;
+        background-repeat: no-repeat;
+    }
+}
+@media (min-width: 925px) {
+    .bloque-presentacion{
+        background-image:
+            linear-gradient(to right, rgba(0, 0, 0, 1) 50%, rgba(0, 0, 0, 0.9) 65%, rgba(0, 0, 0, 0.8) 75%, rgba(0, 0, 0, 0.3) 100%),
+            url(https://img.pikbest.com/wp/202406/cat-eyes-wallpaper-of-a-group-cats-with-different_9608761.jpg!w700wp);
+        background-position: right;
+        background-size: contain;
+        background-repeat: no-repeat;
+    }
+}
+
+.bloque-presentacion>.texto>.encabezado{
+    height: min-content;
+    width: min-content;
+}  
+
+.bloque-presentacion>.texto>.encabezado>*{
+    margin: 0px;
+}
+
+.bloque-presentacion>.texto>.encabezado>h1>span:nth-child(1){
+    font-size: 35px;
+    font-weight: 600;
+    color: var(--s-color);
+}
+
+.bloque-presentacion>.texto>.encabezado>h1>span:nth-child(2){
+    font-size: 45px;
+    font-weight: 700;
+    color: var(--f-color);
+}
+
+/* CONTENEDOR DE MUESTRAS ---------------------------------------------------------------------------------*/
+
+
+.bloque-muestras{
+    background-image: linear-gradient(rgb(126, 94, 64) 40%, rgb(53, 38, 25) 100%);
+    padding: 30px 0 0 0;
+    text-align: center;
+    text-shadow: 0 2px 1px var(--t-color);
+}
+
+.bloque-muestras>.contenedor{
+    padding: 30px;
+
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    gap: 20px 20px;
+}
+
+.bloque-muestras>h2{
+    margin: 0;
+    color: var(--f-color);
+    font-size: 35px;
+}
+
+.bloque-muestras button{
+    height: 60px;
+    width: 180px;
+    margin: 20px 0 35px 0;
+}
+
+.bloque-muestras .card{
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+
+.bloque-muestras .card>.imagen{
+    height:80%;
+    width: 100%;
+    
+    position: absolute;
+    bottom:0;
+
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+}
+
+.bloque-muestras .card:nth-child(1)> .imagen{
+    background-image: url(./img/1.png);
+}
+.bloque-muestras .card:nth-child(2)> .imagen{
+    background-image: url(./img/2.png);
+}
+.bloque-muestras .card:nth-child(3)> .imagen{
+    background-image: url(./img/3.png);
+}
+

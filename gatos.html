@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="./src/img/logo1.svg">
+    <link rel="stylesheet" href="./src/gatos.css">
+    <title>Gatos · AprendeGato</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <section>
+                <a href="./index.html"><img id="nav-logo" src="./src/img/logo2.svg" alt="logo"></a>
+            </section>
+            <ul>
+                <li><a href="./index.html">Inicio</a></li>
+                <li><a href="./gatos.html">Gatos</a></li>
+                <li><a href="./favoritos.html">Favoritos</a></li>
+
+                
+            </ul>
+            <section>
+                <div class="desplegable">
+                    <img src="./src/img/desplegable.svg" alt="menu">
+                    <div class="contenido">
+                        <article><a href="./index.html">Inicio</a></article>
+                        <article><a href="./gatos.html">Gatos</a></article>
+                        <article><a href="./favoritos.html">Favoritos</a></article> 
+                    </div>
+                </div>                  
+            </section>
+        </nav>
+    </header>
+    <main>
+        <div class="encabezado">
+            <div class="bloque-espacio"></div>
+            <h1>¡Explorá el mundo de los gatos!</h1>
+            <div class="bloque-muestra">
+                <section class="bloque-buscador">
+                    <div class="buscador">
+                        <input id="buscador" type="search" placeholder="Siamese, Bengal...">
+                        <button><img src="./src/img/lupa.svg" alt="♀"></button>
+                    </div>
+                </section>
+                <section class="contenedor-filtros">
+                    <div class="titulo-select">Ordenar por</div>
+                    <select name="orden" id="orden">
+                        <option value="az">A-Z</option>
+                        <option value="za">Z-A</option>
+                    </select>
+                    <br>
+                    <div class="titulo-select">País de origen</div>
+                    <select name="origen" id="origen">
+                        <option value="todos">Todos</option>
+                    </select>
+                </section>
+            </div>
+        </div>
+        <!-- Contenedor de cards -->
+        <div id="contenedor-cards" class="contenedor-cards">
+        </div>
+        <!-- Loader -->
+        <div id="loader" class="loader">
+            <div class="spinner"></div>
+        </div>
+        <!-- Boton para cargar lotes de cards de gatos -->
+        <div class="contenedor-boton">
+            <button id="cargarMas">Ver más gatos</button>
+        </div>
+        <!-- Modal para ver los detalles de los gatos -->
+        <div id="modal-detalle" class="modal oculto">
+            <div class="modal-contenido">
+                <span id="cerrar-modal" class="cerrar">&times;</span>
+                <h2 id="modal-nombre"></h2>
+
+                <section class="modal-body">
+                <div class="modal-info">
+                    <p id="modal-descripcion"></p>
+                    <ul>
+                        <li><strong>Esperanza de vida:</strong> <span id="modal-vida"></span></li>
+                        <li><strong>Peso:</strong> <span id="modal-peso"></span></li>
+                        <li><strong>Hipoalergénico:</strong> <span id="modal-hipo"></span></li>
+                        <li><strong>Wikipedia:</strong> <a id="modal-wiki" href="#" target="_blank">Ver más</a></li>
+                    </ul>
+                </div>
+                <div class="modal-imagen">
+                    <img id="modal-img" src="" alt="Imagen del gato">
+                </div>
+                </section>
+
+                <div class="modal-propiedades">
+                    <div class="propiedad">
+                        <label>Amigable con niños</label>
+                        <div class="contenedor-progress">
+                            <progress id="niños" max="5" value="0"></progress>
+                        </div>
+                    </div>
+                    <div class="propiedad">
+                        <label>Amigable con perros</label>
+                        <div class="contenedor-progress">
+                            <progress id="perros" max="5" value="0"></progress>
+                        </div>
+                    </div>
+                    <div class="propiedad">
+                        <label>Inteligencia</label>
+                        <div class="contenedor-progress">
+                            <progress id="inteligencia" max="5" value="0"></progress>
+                        </div>
+                    </div>
+                    <div class="propiedad">
+                        <label>Nivel de afecto</label>
+                        <div class="contenedor-progress">
+                            <progress id="afecto" max="5" value="0"></progress>
+                        </div>
+                    </div>
+                    <div class="propiedad">
+                        <label>Problemas de salud</label>
+                        <div class="contenedor-progress">
+                            <progress id="salud" max="5" value="0"></progress>
+                        </div>
+                    </div>
+                    <div class="propiedad">
+                        <label>Cuidado de pelaje</label>
+                        <div class="contenedor-progress">
+                            <progress id="pelaje" max="5" value="0"></progress>
+                        </div>
+                    </div>
+                    <div class="propiedad">
+                        <label>Muda de pelo</label>
+                        <div class="contenedor-progress">
+                            <progress id="muda" max="5" value="0"></progress>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        Desarrollado por&nbsp;<a href="https://github.com/lorenzodriva"><b>@lorenzodriva</b></a>&nbsp;- Creado con The Cat API (visitá su&nbsp;<a href="https://thecatapi.com/"><u>página oficial</u></a>)
+    </footer>
+    <script type="module" src="./src/main.js"></script>
+</body>
+</html>

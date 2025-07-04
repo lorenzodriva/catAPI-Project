@@ -1,0 +1,231 @@
+:root {
+    --p-color: #000001;
+    --s-color: rgb(115, 116, 71);
+    --t-color: #30220b;
+    --q-color: #917557;
+    --f-color: #f5e0ad;
+    --x-color: #965b3a;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    margin:0;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+/* AJUSTES GLOBALES DE ELEMENTOS -------------------------------------------------------------------------*/
+h1{
+    font-size: 40px;
+}
+
+a{
+    text-decoration: none;
+    color: currentColor;
+}
+
+main button{
+    height: 40px;
+    width: 120px;
+    border: none;
+    border-radius: 5px;
+    font-size: medium;
+    color: var(--t-color);
+    font-weight: 600;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    cursor: pointer;
+    transition: 0.3s;
+    background-color: var(--f-color);
+    box-shadow: 0px 1px 9px var(--t-color);
+}
+
+main button:hover{
+    transform: scale(1.1);
+}
+
+li{
+    transition: 0.3s linear;
+}
+
+li:hover{
+    transform: scale(1.1)
+}
+
+*[class*="bloque"]{
+    scroll-margin-top: 75px;
+}
+
+textarea{
+    all: unset;
+}
+
+/* HEADER -------------------------------------------------------------------------*/
+
+header{
+    top:0;
+    position: sticky;
+    z-index: 1000;
+    box-shadow: 0 -2px 12px black;
+}
+
+nav{
+    width: 100%;   
+    
+    background-color: var(--f-color);
+    color: var(--t-color);
+    
+    margin: 0;
+    padding: 26px 0;
+    
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    transition: 1s;
+}
+
+/* -------LOGO FIRMA INICIO------------ */
+
+#nav-logo{
+    width: 50px;
+    height: auto;
+    scale: 3;
+}
+
+nav>section{
+    width: 20%;
+    display:flex;
+    justify-content: center;
+}
+
+nav>section img{
+    cursor: pointer;
+    transition: 1s;
+}
+
+nav>section img:hover{
+    transform: scale(1.15);
+}
+
+/* -------LISTA OPCIONES------------ */
+
+nav>ul{
+    width: 60%;
+    list-style: none;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 0;
+    margin:0;
+    font-weight: 500;
+    font-size: large;
+}
+
+/* -------DESPLEGABLE------------ */
+
+.desplegable{
+    border: none;
+    background: none;
+    text-align: center;
+    position: relative;
+    padding-bottom: 5px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.desplegable>img{
+    width: 25px;
+    height: auto;
+    cursor: pointer;
+}
+
+.desplegable>.contenido{
+    display: none;
+    background-color: var(--f-color);
+    border-radius: 10px;
+    position: absolute;
+    font-weight: 500;
+    z-index: 100;
+    padding: 10px;
+    top: 100%;
+    box-shadow: 0 8px 7px black;
+}
+
+.desplegable>.contenido article{
+    padding: 20px;
+}
+
+.desplegable:hover > .contenido{
+    display: block;
+}
+
+
+@media (max-width: 499px){
+    nav>ul{
+        display: none;
+        width: 0%;
+    }
+    nav section{
+        width: 50%;
+    }
+}
+
+@media (min-width: 500px){
+    .desplegable{
+        display: none;
+    }
+}
+
+/* MAIN -------------------------------------------------------------------------*/
+
+.texto-importante{
+    font-weight: bold;
+    font-size: large;
+}
+
+.texto>.cuerpo{
+    font-size: medium;
+}
+
+.botones button{
+    margin: 20px 20px 20px 0;
+}
+
+.card{
+    height: 225px;
+    width: 275px;
+    border: 0;
+    border-radius: 12px;
+    
+    box-shadow: 0px 1px 9px var(--t-color);
+    background-color: var(--f-color);
+
+    color: #30220b;
+    text-shadow: none;
+
+    transition: 1.1s;
+}
+
+.card:hover{
+    transform: scale(1.15);
+}
+
+
+
+/* FOOTER -------------------------------------------------------------------------*/
+footer{
+    width: 100%;
+    height: 80px;
+    background-color: var(--s-color);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: var(--f-color);
+
+}
